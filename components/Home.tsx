@@ -90,7 +90,7 @@ const Home = () => {
                 component="span"
                 sx={{
                   textDecoration: "underline",
-                  textDecorationColor: `${theme.palette.primary.red}`,
+                  textDecorationColor: `${theme.palette.red.main}`,
                 }}
                 display="inline"
               >
@@ -129,7 +129,11 @@ const Home = () => {
           </Box>
 
           <Box>
-            <Image src={qaImage} className={styles.heroImage} />
+            <Image
+              src={qaImage}
+              className={styles.heroImage}
+              alt="Hero image"
+            />
           </Box>
         </Box>
       </Container>
