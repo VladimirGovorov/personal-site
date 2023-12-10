@@ -4,7 +4,7 @@
 import Link from "next/link";
 // import { getDatabase } from "./api/notion";
 import styles from "../../styles/Home.module.css";
-import Home from "../../components/Home";
+import Home from "../../components/home/Home";
 import About from "../../components/About";
 import { Container, ThemeProvider } from "@mui/material/";
 import Layout from "../../layout/Layout";

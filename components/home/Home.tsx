@@ -17,8 +17,8 @@ interface HeroData {
   button1: string;
   button2: string;
 }
-import qaImage from "../public/images/qa-home.gif";
-import styles from "../styles/Home.module.css";
+import qaImage from "../../public/images/qa-home.gif";
+import styles from "../../styles/Home.module.css";
 import Typewriter from "typewriter-effect";
 import { styled } from "@mui/material/styles";
 import { useTheme } from "@mui/material/styles";
@@ -42,7 +42,6 @@ const Home = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          //   clipPath: "polygon(0 0, 100% 0, 50% 100%)",
         }}
       >
         <Box
@@ -90,7 +89,7 @@ const Home = () => {
                 component="span"
                 sx={{
                   textDecoration: "underline",
-                  textDecorationColor: `${theme.palette.red.main}`,
+                  // textDecorationColor: `${theme.palette.red.main}`,
                 }}
                 display="inline"
               >
@@ -108,6 +107,7 @@ const Home = () => {
                   href="#about"
                   size="large"
                   variant="contained"
+                  role="button"
                 >
                   About
                 </Button>
@@ -121,6 +121,7 @@ const Home = () => {
                   href="#contact"
                   size="large"
                   variant="outlined"
+                  role="button"
                 >
                   Hire me
                 </Button>
