@@ -126,7 +126,7 @@ const Home = () => {
                   variant="outlined"
                   role="button"
                 >
-                  Hire me
+                  Contact
                 </Button>
               </Grid>
             </Grid>

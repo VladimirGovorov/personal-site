@@ -5,11 +5,12 @@ import Link from "next/link";
 // import { getDatabase } from "./api/notion";
 import styles from "../../styles/Home.module.css";
 import Home from "../../components/home/Home";
-import About from "../../components/About";
+import About from "../../components/about/About";
 import { Container, ThemeProvider } from "@mui/material/";
 import Layout from "../../layout/Layout";
 
 import appTheme from "@/themes/muiTheme";
+import Contact from "../../components/contact/Contact";
 // export const databaseId =
 //   process.env?.NOTION_DATABASE_ID ?? "NOTION_DATABASE_ID";
 
@@ -30,6 +31,7 @@ export default async function Page() {
           <Container>
             <Home />
             <About />
+            <Contact />
           </Container>
         </Layout>
       </ThemeProvider>

@@ -2,19 +2,19 @@
 import {
   Box,
   Container,
-  Button,
   Typography,
-  Grid,
   Divider,
   IconButton,
 } from "@mui/material/";
 import Image from "next/image";
-import AvatarImage from "../public/images/avatar.png";
+import AvatarImage from "../../public/images/avatar.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { styled } from "@mui/material/styles";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { SiSelenium } from "react-icons/si";
+import { FaJenkins } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
+
 import { useTheme } from "@mui/material/styles";
 
 const About = () => {
@@ -53,6 +53,7 @@ const About = () => {
           minHeight: {
             xs: "100dvh",
           },
+          marginBottom: "50px",
         }}
       >
         <Box
@@ -96,6 +97,33 @@ const About = () => {
               diligent testing.I appreciate every opportunity to learn and grow
               as a QA dev.
             </Typography>
+            <Box style={{ display: "flex", flexDirection: "row", gap: "5px" }}>
+              <Typography
+                sx={{
+                  marginTop: "15px",
+
+                  typography: {
+                    xs: "h6",
+                    sm: "h6",
+                  },
+                  textDecoration: "underline",
+                  textDecorationColor: `${theme.palette.primary.main}`,
+                }}
+              >
+                Stack
+              </Typography>
+              <Typography
+                sx={{
+                  marginTop: "15px",
+                  typography: {
+                    xs: "h6",
+                    sm: "h6",
+                  },
+                }}
+              >
+                I worked with:
+              </Typography>
+            </Box>
             <Box
               sx={{
                 display: "flex",
@@ -104,9 +132,8 @@ const About = () => {
               }}
             >
               <IconButton
-                aria-label={"Github"}
+                aria-label={"Selenium"}
                 component="a"
-                href={""}
                 rel="noopener"
                 size="large"
                 sx={{
@@ -117,20 +144,35 @@ const About = () => {
                   "&:focus": {
                     fill: (theme) => theme.palette.primary.main,
                   },
+                  display: "flex",
+                  flexDirection: "column",
                 }}
                 target="_blank"
               >
-                <GitHubIcon
-                  sx={{
-                    fontSize: "80px",
+                <SiSelenium
+                  style={{
+                    fontSize: "60px",
                     color: theme.palette.primary.main,
                   }}
                 />
+                <Typography
+                  sx={{
+                    typography: {
+                      xs: "h6",
+                      sm: "h5",
+                    },
+                  }}
+                  style={{
+                    color: theme.palette.primary.main,
+                    marginTop: "5px",
+                  }}
+                >
+                  Selenium
+                </Typography>
               </IconButton>
               <IconButton
-                aria-label={"Github"}
+                aria-label={"Jenkins"}
                 component="a"
-                href={""}
                 rel="noopener"
                 size="large"
                 sx={{
@@ -141,15 +183,70 @@ const About = () => {
                   "&:focus": {
                     fill: (theme) => theme.palette.primary.main,
                   },
+                  display: "flex",
+                  flexDirection: "column",
                 }}
                 target="_blank"
               >
-                <LinkedInIcon
-                  sx={{
-                    fontSize: "80px",
+                <FaJenkins
+                  style={{
+                    fontSize: "60px",
                     color: theme.palette.primary.main,
                   }}
                 />
+                <Typography
+                  sx={{
+                    typography: {
+                      xs: "h6",
+                      sm: "h5",
+                    },
+                  }}
+                  style={{
+                    color: theme.palette.primary.main,
+                    marginTop: "5px",
+                  }}
+                >
+                  Jenkins
+                </Typography>
+              </IconButton>
+              <IconButton
+                aria-label={"java"}
+                component="a"
+                rel="noopener"
+                size="large"
+                sx={{
+                  fill: (theme) => theme.palette.common.white,
+                  "&:hover": {
+                    fill: (theme) => theme.palette.primary.main,
+                  },
+                  "&:focus": {
+                    fill: (theme) => theme.palette.primary.main,
+                  },
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+                target="_blank"
+              >
+                <FaJava
+                  style={{
+                    fontSize: "60px",
+                    color: theme.palette.primary.main,
+                  }}
+                />
+                <Typography
+                  sx={{
+                    typography: {
+                      xs: "h6",
+                      sm: "h5",
+                    },
+                  }}
+                  style={{
+                    color: theme.palette.primary.main,
+                    marginTop: "5px",
+                  }}
+                >
+                  Java
+                </Typography>
               </IconButton>
             </Box>
           </Box>
