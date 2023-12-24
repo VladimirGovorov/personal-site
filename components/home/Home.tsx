@@ -66,7 +66,6 @@ const Home = () => {
                 component="span"
                 variant="inherit"
               >
-                {" "}
                 Vlad
               </Typography>
             </Typography>
@@ -74,7 +73,7 @@ const Home = () => {
             <Typography
               gutterBottom
               component="h1"
-              variant="h2"
+              sx={{ typography: { xs: "h4", md: "h2" } }}
               color="#fbae38"
             >
               <Typewriter
@@ -93,11 +92,11 @@ const Home = () => {
                 component="span"
                 sx={{
                   textDecoration: "underline",
-                  // textDecorationColor: `${theme.palette.red.main}`,
+                  textDecorationColor: `${theme.palette.red.main}`,
                 }}
                 display="inline"
               >
-                tech related{" "}
+                tech related
               </Typography>
             </Typography>
 
