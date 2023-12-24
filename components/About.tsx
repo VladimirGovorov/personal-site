@@ -89,14 +89,12 @@ const About = () => {
             <Typography
               component="h6"
               variant="h6"
-              sx={{ marginTop: "15px", textAlign: "justify" }}
+              sx={{ marginTop: "15px", textAlign: "start" }}
             >
-              Dedicated QA Developer with a fervent passion for ensuring
-              software excellence. I thrive on the intricate details of Quality
-              Assurance and possess a genuine love for technology in all its
-              facets. Committed to enhancing the user experience through
-              meticulous testing and a profound appreciation for the
-              ever-evolving tech landscape.
+              Dedicated QA Developer with a passion for ensuring software
+              excellence. Committed to enhancing the user experience through
+              diligent testing.I appreciate every opportunity to learn and grow
+              as a QA dev.
             </Typography>
             <Box
               sx={{
