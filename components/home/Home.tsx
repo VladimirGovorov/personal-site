@@ -42,6 +42,10 @@ const Home = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
+          marginTop: {
+            sm: "50px",
+            md: 0,
+          },
         }}
       >
         <Box
@@ -55,7 +59,7 @@ const Home = () => {
                 variant="inherit"
               >
                 Hi there! <span className={styles.wave}>👋🏼</span>
-              </Typography>{" "}
+              </Typography>
               I&apos;m
               <Typography
                 color="primary.main"
