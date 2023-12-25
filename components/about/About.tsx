@@ -53,14 +53,18 @@ const About = () => {
           minHeight: {
             xs: "100dvh",
           },
-          marginBottom: "50px",
+          marginTop: {
+            xs: "100px",
+            sm: "50px",
+          },
+          marginBottom: { xs: "100px", md: "50px" },
         }}
       >
         <Box
           sx={{
             display: "flex",
             justifyContent: "center",
-            marginBottom: "50px",
+            marginBottom: { xs: "100px", md: "50px" },
           }}
         >
           <Typography component="h3" variant="h3">

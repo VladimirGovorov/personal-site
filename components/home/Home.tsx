@@ -43,13 +43,18 @@ const Home = () => {
           flexDirection: "column",
           justifyContent: "center",
           marginTop: {
-            xs: "0px",
+            xs: "100px",
             sm: "50px",
           },
+          marginBottom: { xs: "100px", md: "50px" },
         }}
       >
         <Box
-          sx={{ display: "flex", flexDirection: { xs: "column", md: "row" } }}
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            marginBottom: { xs: "100px", md: "50px" },
+          }}
         >
           <Box mb={7} width={"100%"}>
             <Typography gutterBottom component="h4" variant="h4">
