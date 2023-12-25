@@ -35,6 +35,7 @@ const Home = () => {
   return (
     <Box component="section" id="home">
       <Container
+        id="home"
         sx={{
           minHeight: {
             xs: "100dvh",

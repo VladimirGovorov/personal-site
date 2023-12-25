@@ -69,9 +69,11 @@ const Navbar = () => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
-            <Image src={PersonalLogo} width={50} alt="logo" />
-          </Box>
+          <Link href="#home">
+            <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
+              <Image src={PersonalLogo} width={50} alt="logo" />
+            </Box>
+          </Link>
           <Box sx={{ flexGrow: 0.5, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -113,9 +115,11 @@ const Navbar = () => {
               </MenuItem>
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
-            <Image src={PersonalLogo} width={50} alt="logo" />
-          </Box>
+          <Link href="#home">
+            <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
+              <Image src={PersonalLogo} width={50} alt="logo" />
+            </Box>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Link href="#about">
               <Button
