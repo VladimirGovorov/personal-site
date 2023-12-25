@@ -83,6 +83,16 @@ const Contact = () => {
 
         <Box
           sx={{
+            display: { xs: "flex", md: "none" },
+            justifyContent: "center",
+            ml: 10,
+          }}
+        >
+          <Image src={ContactImage} width={250} alt="Avatar image" />
+        </Box>
+
+        <Box
+          sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             justifyContent: {
@@ -235,7 +245,9 @@ const Contact = () => {
               },
             }}
           >
-            <Image src={ContactImage} width={350} alt="Avatar image" />
+            <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
+              <Image src={ContactImage} width={350} alt="Avatar image" />
+            </Box>
           </Box>
         </Box>
       </Container>

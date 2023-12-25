@@ -43,8 +43,8 @@ const Home = () => {
           flexDirection: "column",
           justifyContent: "center",
           marginTop: {
+            xs: "0px",
             sm: "50px",
-            md: 0,
           },
         }}
       >

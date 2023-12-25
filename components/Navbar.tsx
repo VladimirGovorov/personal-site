@@ -36,8 +36,6 @@ const Navbar = () => {
 
   const theme = useTheme();
 
-  //close navbar on scroll
-
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -119,15 +117,22 @@ const Navbar = () => {
             <Image src={PersonalLogo} width={50} alt="logo" />
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            <Link href="#about">
               <Button
-                key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                About
               </Button>
-            ))}
+            </Link>
+            <Link href="#contact">
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                Contact
+              </Button>
+            </Link>
           </Box>
         </Toolbar>
       </Container>

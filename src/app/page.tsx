@@ -11,6 +11,7 @@ import Layout from "../../layout/Layout";
 
 import appTheme from "@/themes/muiTheme";
 import Contact from "../../components/contact/Contact";
+import Footer from "../../components/footer/Footer";
 // export const databaseId =
 //   process.env?.NOTION_DATABASE_ID ?? "NOTION_DATABASE_ID";
 
@@ -32,6 +33,7 @@ export default async function Page() {
             <Home />
             <About />
             <Contact />
+            <Footer />
           </Container>
         </Layout>
       </ThemeProvider>
