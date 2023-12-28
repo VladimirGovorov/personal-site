@@ -7,7 +7,7 @@ import {
   IconButton,
 } from "@mui/material/";
 import Image from "next/image";
-import AvatarImage from "../../public/images/avatar.png";
+import AvatarImage from "../../public/images/vlade.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { styled } from "@mui/material/styles";
@@ -83,7 +83,7 @@ const About = () => {
             alignItems: "center",
           }}
         >
-          <Box>
+          <Box style={{ borderRadius: "50%", overflow: "hidden" }}>
             <Image src={AvatarImage} width={350} alt="Avatar image" />
           </Box>
           <Box sx={{ marginTop: "30px", width: { xs: "100%", md: "50%" } }}>
