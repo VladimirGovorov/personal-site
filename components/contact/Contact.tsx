@@ -39,7 +39,7 @@ const Contact = () => {
   const theme = useTheme();
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("mail@gmail.com");
+    navigator.clipboard.writeText("govorusa98@gmail.com");
     setSuccessMsg(true);
 
     // when the component is mounted, the alert is displayed for 1 seconds
@@ -104,15 +104,14 @@ const Contact = () => {
         >
           <Box sx={{ marginTop: "30px", width: { xs: "100%", md: "50%" } }}>
             <Typography component="h4" variant="h4" color="primary">
-              Have some interesting idea?
+              Have an interesting idea?
             </Typography>
             <Typography
               component="h6"
               variant="h6"
               sx={{ marginTop: "15px", textAlign: "start" }}
             >
-              Let&apos;s collaborate, and feel free to ask me any additional
-              questions
+             Let&apos;s collaborate together on application testing
             </Typography>
             <Box style={{ display: "flex", flexDirection: "row", gap: "5px" }}>
               <Typography
@@ -169,7 +168,7 @@ const Contact = () => {
                     marginTop: "5px",
                   }}
                 >
-                  mail@gmail.com
+                  govorusa98@gmail.com
                 </Typography>
               </IconButton>
               {successMsg && (

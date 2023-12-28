@@ -7,7 +7,7 @@ describe("Home component", () => {
     render(<Home />);
     const greetingsElement = screen.getByText(/Hi there!/i);
     const introductionElement = screen.getByText(/Vlad/i);
-
+   
     expect(greetingsElement).toBeInTheDocument();
     expect(introductionElement).toBeInTheDocument();
   });
@@ -28,4 +28,17 @@ describe("Home component", () => {
     const heroImage = screen.getByAltText("Hero image");
     expect(heroImage).toBeInTheDocument();
   });
+
+  test("renders subtext", () => {
+    render(<Home />);
+    const secondText = screen.getByText(/Passionate about QA/i);
+
+    expect (secondText).toBeInTheDocument();
+  });
+
+
 });
+
+
+
+
