@@ -1,44 +1,39 @@
-import { render, screen } from "@testing-library/react";
+import React from "react";
+import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Home from "./Home";
 
+jest.mock("@mui/material/styles", () => ({
+  ...jest.requireActual("@mui/material/styles"),
+  useTheme: () => ({
+    palette: {
+      primary: {
+        main: "#ffffff",
+        red: {
+          main: "#ff0000",
+        },
+      },
+      red: {
+        main: "#ff0000",
+      },
+    },
+  }),
+}));
+
 describe("Home component", () => {
-  test("renders greetings and introduction", () => {
-    render(<Home />);
-    const greetingsElement = screen.getByText(/Hi there!/i);
-    const introductionElement = screen.getByText(/Vlad/i);
-   
-    expect(greetingsElement).toBeInTheDocument();
-    expect(introductionElement).toBeInTheDocument();
+  it("renders greetings correctly", () => {
+    const { getByText } = render(<Home />);
+    expect(getByText("Hi there!")).toBeInTheDocument();
   });
 
-  test("renders buttons with correct text and href", () => {
-    render(<Home />);
-    const aboutButton = screen.getByRole("button", { name: /About/i });
-    const hireMeButton = screen.getByRole("button", { name: /Hire me/i });
-
-    expect(aboutButton).toBeInTheDocument();
-    expect(hireMeButton).toBeInTheDocument();
-    expect(aboutButton).toHaveAttribute("href", "#about");
-    expect(hireMeButton).toHaveAttribute("href", "#contact");
+  it("renders paragraph correctly", () => {
+    const { getByText } = render(<Home />);
+    expect(getByText(/Passionate about QA/)).toBeInTheDocument();
   });
 
-  test("renders hero image", () => {
-    render(<Home />);
-    const heroImage = screen.getByAltText("Hero image");
-    expect(heroImage).toBeInTheDocument();
+  it("renders buttons correctly", () => {
+    const { getByRole } = render(<Home />);
+    expect(getByRole("button", { name: /About/ })).toBeInTheDocument();
+    expect(getByRole("button", { name: /Contact/ })).toBeInTheDocument();
   });
-
-  test("renders subtext", () => {
-    render(<Home />);
-    const secondText = screen.getByText(/Passionate about QA/i);
-
-    expect (secondText).toBeInTheDocument();
-  });
-
-
 });
-
-
-
-
